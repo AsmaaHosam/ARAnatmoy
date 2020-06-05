@@ -15,6 +15,6 @@ public class Activate : MonoBehaviour
     private void FixedUpdate()
     {
         canvas.gameObject.transform.LookAt(Camera.main.transform);
-        canvas.gameObject.transform.rotation = Quaternion.Euler(0, canvas.gameObject.transform.rotation.eulerAngles.y, 0);
+        canvas.gameObject.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
     }
 }
