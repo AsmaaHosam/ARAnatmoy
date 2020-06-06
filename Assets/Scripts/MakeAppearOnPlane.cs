@@ -67,12 +67,13 @@ public class MakeAppearOnPlane : MonoBehaviour
             // such that the content appears to be at the raycast hit position.
             {
                 spawnedObject = Instantiate(content,hitPose.position,hitPose.rotation);
-                m_SessionOrigin.MakeContentAppearAt(content.transform, content.transform.position, m_Rotation);
+               // m_SessionOrigin.MakeContentAppearAt(content.transform, content.transform.position, m_Rotation);
             }
-            else
-            {   content.transform.position = hitPose.position;
-                m_SessionOrigin.MakeContentAppearAt(content.transform, content.transform.position, m_Rotation);
-            }
+            //else
+            //{
+            //    content.transform.position = hitPose.position;
+            //    m_SessionOrigin.MakeContentAppearAt(content.transform, content.transform.position, m_Rotation);
+            //}
         }
     }
 

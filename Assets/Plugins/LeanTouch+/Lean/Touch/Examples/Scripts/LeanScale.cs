@@ -85,7 +85,7 @@ namespace Lean.Touch
 		protected virtual void TranslateUI(float pinchScale, Vector2 pinchScreenCenter)
 		{
 			// Screen position of the transform
-			var screenPoint = RectTransformUtility.WorldToScreenPoint(Camera, transform.position);
+			var screenPoint = RectTransformUtility.WorldToScreenPoint(Camera.main, transform.position);
 
 			// Push the screen position away from the reference point based on the scale
 			screenPoint.x = pinchScreenCenter.x + (screenPoint.x - pinchScreenCenter.x) * pinchScale;
@@ -94,7 +94,7 @@ namespace Lean.Touch
 			// Convert back to world space
 			var worldPoint = default(Vector3);
 
-			if (RectTransformUtility.ScreenPointToWorldPointInRectangle(transform.parent as RectTransform, screenPoint, Camera, out worldPoint) == true)
+			if (RectTransformUtility.ScreenPointToWorldPointInRectangle(transform.parent as RectTransform, screenPoint, Camera.main, out worldPoint) == true)
 			{
 				transform.position = worldPoint;
 			}
@@ -103,7 +103,7 @@ namespace Lean.Touch
 		protected virtual void Translate(float pinchScale, Vector2 screenCenter)
 		{
 			// Make sure the camera exists
-			var camera = LeanTouch.GetCamera(Camera, gameObject);
+			var camera = LeanTouch.GetCamera(Camera.main, gameObject);
 
 			if (camera != null)
 			{
@@ -134,5 +134,6 @@ namespace Lean.Touch
 
 			transform.localScale = scale;
 		}
-	}
+
+    }
 }
