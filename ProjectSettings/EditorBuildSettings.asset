@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Placment.unity
     guid: f3be9799ff2474793a59720ec18cf4e1
   - enabled: 1
-    path: Assets/Scenes/Scale.unity
+    path: Assets/Scenes/ARMood.unity
     guid: c8d8efaa9168342ebb0f80da24fe51e4
   m_configObjects: {}
