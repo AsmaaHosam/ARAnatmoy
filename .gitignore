@@ -6,6 +6,7 @@
 /[Tt]emp/
 /[Oo]bj/
 /[Ll]ogs/
+/[Bb]uilds/
 /[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
@@ -50,6 +51,7 @@ sysinfo.txt
 
 # Builds
 *.aab
+*.abk
 *.unitypackage
 
 # Crashlytics generated file

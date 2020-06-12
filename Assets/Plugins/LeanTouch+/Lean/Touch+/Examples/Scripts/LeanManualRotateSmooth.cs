@@ -37,6 +37,7 @@ namespace Lean.Touch
 
 			// Revert
 			finalTransform.localRotation = oldRotation;
+            Debug.Log("doing rotation");
 		}
 
 		protected virtual void Update()

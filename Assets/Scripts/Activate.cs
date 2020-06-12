@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class Activate : MonoBehaviour
 {
-    public Canvas canvas;
+    public GameObject[] models;
+    public GameObject info;
     // Start is called before the first frame update
     void Start()
     {
-        canvas.gameObject.SetActive(true);
+       // info.SetActive(true);
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
-        canvas.gameObject.transform.LookAt(Camera.main.transform);
-        canvas.gameObject.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+        //info.transform.LookAt(Camera.main.transform);
+        //info.transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+    }
+
+    public void ActivateSelectedModel(int modelIndex)
+    {
+        for(int i=0;i<models.Length;i++)
+        {
+            models[i].SetActive(false);
+        }
+        models[modelIndex].SetActive(true);
     }
 }
